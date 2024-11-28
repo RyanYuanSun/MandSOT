@@ -3,27 +3,16 @@
 
 # MandSOT: Mandarin Speech Onset Time (SOT) Detection Using Machine Learning
 MandSOT is a machine learning model, employing a Convolutional Neural Network (CNN) architecture, trained for the automated detection of Speech Onset Time (SOT) in Mandarin speech.
-## Background
-### Datasets
-#### Mandarin Speeches
-  - EEG Picture Naming Records
-    - **Source**
-      - Institution: ``Department of Chinese and Bilingual Studies, Hong Kong Polytechnic University``
-      - Research Lead: ``Dr. Xiaocong Chen`` [Github Profile](https://github.com/felcshallot) [Google Scholar](https://scholar.google.com/citations?user=gHlLwKoAAAAJ&hl=en)
-    - **Dataset Description**
-      - This collection comprises a total of 12,522 audio recordings in WAV format, sampled at 48kHz. These recordings were captured as part of an EEG study focusing on Mandarin speech.
-    - **Speaker Details**
-      - Number of Speakers: ``38``
-      - Language: ``Mandarin``
-    - **Annotations**
-      - Each recording is accompanied by precise Speech Onset Time (SOT) annotations. These annotations have been meticulously marked using [Praat](https://www.fon.hum.uva.nl/praat/) by Dr.Xiaocong CHEN and others.
-#### Acoustic Noises
+## Datasets
+### Mandarin Speeches
+The dataset includes 12,522 audio recordings of Mandarin speech, sampled at 48kHz, for an EEG study. It features 38 speakers, and each recording is accompanied by precise Speech Onset Time (SOT) annotations, meticulously marked by Dr. Xiaocong Chen and his team using Praat.
+### Acoustic Noises
   - DEMAND Dataset
     - See [DEMAND Dataset](https://www.kaggle.com/datasets/chrisfilo/demand).
   - Other Noises
     - Background noise recorded in room ZB217 at UBSN, Hong Kong Polytechnic University with AC fan set to lvl 1, 2 and 3.
     - Background noise recorded in office GH709, Hong Kong Polytechnic University.
-### Network Structure
+## Network
 ```
 ----------------------------------------------------------------
         Layer (type)               Output Shape         Param #
@@ -49,8 +38,8 @@ Params size (MB): 8.09
 Estimated Total Size (MB): 15.34
 ----------------------------------------------------------------
 ```
-### Workflow
-#### Dataset Preparation
+## Workflow
+### Dataset Preparation
 ```
 INPUT <dataset, pd.dataFrame, [0, 0]>
 |
